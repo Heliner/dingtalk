@@ -126,7 +126,7 @@ func NewMarkDownMsg(title string, text interface{}, opts ...atOption) *markDownM
 		var atStr = ""
 		for _, userid := range msg.At.AtUserIds {
 			// 为@设置默认颜色
-			atStr = fmt.Sprintf("<font color=#0089ff> @%s  </font>", userid)
+			atStr += fmt.Sprintf("<font color=#0089ff> @%s  </font>", userid)
 		}
 		msg.Markdown.Text = msg.Markdown.Text + "\n" + atStr
 	}
