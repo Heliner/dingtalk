@@ -69,6 +69,7 @@ type atModel struct {
 type linkOption interface {
 	apply(model *linkModel)
 }
+
 type funcLinkOption struct {
 	f func(model *linkModel)
 }
